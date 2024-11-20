@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <h2>Conferencias</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Starts</th>
+            <th>Ends</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of conferencias; let i = index" (click)="selectConferencias(s)">
+            <td>{{ i + 1 }}</td>
+            <td>{{ s.name }}</td>
+            <td>{{ s.starts }}</td>
+            <td>{{ s.ends }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Pasan: {{ averageSeasons }}</p>
+    </div>
+    <div class="col-6">
+      
+    </div>
+  </div>
+</div>
